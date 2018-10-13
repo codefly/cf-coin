@@ -8,7 +8,7 @@ class Transaction {
         this.outputs = [];
     }
 
-    static newTransaction(senderWallet, receipent, amount) {
+    static newTransaction(senderWallet, recipient, amount) {
         const transaction = new this();
 
         if(amount > senderWallet.balance) {
@@ -18,7 +18,7 @@ class Transaction {
 
         transaction.outputs.push(...[
             { amount: senderWallet.balance - amount, address: senderWallet.publicKey },
-            { amount, address: recepient }
+            { amount, address: recipient }
         ]);
 
         return transaction;

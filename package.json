@@ -9,6 +9,9 @@
     "dev": "nodemon ./app",
     "dev-test": "node dev-test.js"
   },
+  "jest": {
+    "testEnvironment": "node"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
